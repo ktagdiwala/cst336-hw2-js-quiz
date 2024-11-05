@@ -23,6 +23,10 @@ function isFormValid(){
         isValid = false;
         document.querySelector("#validationFdbk").innerHTML = "Question 1 was not answered";
     }
+    if(document.querySelector("#q7").value==""){
+        isValid = false;
+        document.querySelector("#validationFdbk").innerHTML = "Question 7 was not answered";
+    }
     return isValid;
 }//isFormValid
 
@@ -39,6 +43,11 @@ function gradeQuiz(){
     let q1Response = document.querySelector("#q1").value.toLowerCase();
     let q2Response = document.querySelector("#q2").value;
     let q4Response = document.querySelector("input[name=q4]:checked").value;
+    let q5Response = document.querySelector("#q5").value;
+    let q7Response = document.querySelector("#q7").value.toLowerCase();
+    let q8Response = document.querySelector("input[name=q8]:checked").value;
+    let q9Response = document.querySelector("#q9").value;
+
     // console.log(q4Response);
 
     // Grading question 1
@@ -70,6 +79,42 @@ function gradeQuiz(){
         wrongAnswer(4);
     }
 
+    // Grading question 5
+    if(q5Response == "ak"){
+        rightAnswer(5);
+    }else{
+        wrongAnswer(5);
+    }
+
+    // Grading question 6
+    if(document.querySelector("#Pacific").checked && document.querySelector("#Atlantic").checked &&
+        document.querySelector("#Arctic").checked && !document.querySelector("#Indian").checked){
+        rightAnswer(6);
+    }else{
+        wrongAnswer(6);
+    }
+
+    // Grading question 7
+    if(q7Response == "los angeles" || q7Response == "los angeles county"){
+        rightAnswer(7);
+    }else{
+        wrongAnswer(7);
+    }
+
+    // Grading question 8
+    if(q8Response == "Tennessee"){
+        rightAnswer(8);
+    }else{
+        wrongAnswer(8);
+    }
+
+    // Grading question 9
+    if(q9Response == "ca"){
+        rightAnswer(9);
+    }else{
+        wrongAnswer(9);
+    }
+
     let totalScore = document.querySelector("#totalScore");
 
     totalScore.textContent = `Total Score: ${score}`;
@@ -88,7 +133,7 @@ function rightAnswer(index){
     document.querySelector(`#q${index}Feedback`).innerHTML = "Correct";
     document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
     document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png' alt='Checkmark'>";
-    score += 20;
+    score += 10;
 }
 
 function wrongAnswer(index){
