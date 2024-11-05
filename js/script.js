@@ -42,10 +42,10 @@ function gradeQuiz(){
     score = 0;
     let q1Response = document.querySelector("#q1").value.toLowerCase();
     let q2Response = document.querySelector("#q2").value;
-    let q4Response = document.querySelector("input[name=q4]:checked").value;
+    let q4Response = document.querySelector("input[name=q4]:checked") ? document.querySelector("input[name=q4]:checked").value : "";
     let q5Response = document.querySelector("#q5").value;
     let q7Response = document.querySelector("#q7").value.toLowerCase();
-    let q8Response = document.querySelector("input[name=q8]:checked").value;
+    let q8Response = document.querySelector("input[name=q8]:checked") ? document.querySelector("input[name=q8]:checked").value : "";
     let q9Response = document.querySelector("#q9").value;
 
     // console.log(q4Response);
