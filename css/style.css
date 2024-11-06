@@ -1,4 +1,9 @@
 body {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    min-height: 100vh;
+    position: relative;
     align-items: center;
     background-color: #003049;
     color: #fff8e7;
@@ -7,13 +12,61 @@ body {
     font-style: normal;
 }
 
+footer {
+    margin-top: auto;
+    bottom: 0;
+    width: 100%;
+    text-align: start;
+    color: #fcbf49;
+    font-weight: 400;
+}
+
+#footer-content { /* displays image and text side-by-side */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+}
+
+#csumb-logo {
+    width: 70px;
+    height: auto;
+    border: 2px #fcbf49 solid;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+hr {
+    width: 100%;
+    color: #fcbf49;
+}
+
 .banner {
+    width:100%;
+    position: relative;
     background-image: url('../img/flag_banner.png');
-    color: #fff8e7;
     background-size: 100% auto;
     background-position: center;
     font-weight: 600;
+    color: #fff8e7;
 }
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #002f495e;
+    z-index: 0;
+}
+
+.banner_content{
+    position: relative;
+    z-index: 1; /* Ensure the text is above the overlay */
+}
+
 
 input {
     display:flex;
