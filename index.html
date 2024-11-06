@@ -5,103 +5,166 @@
         <title>US Geography Quiz</title>
         <link rel="icon" href="img/usaFavicon.png" type="image/x-icon">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet"/>  
         <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.2/underscore-umd-min.js"> </script> 
     </head>
 
     <body class = "text-center">
-        <h1 class="p-5 bg-info">US Geography Quiz</h1>
-        <!-- First Question -->
-            <h3><span id="markImg1"></span>What is the capital of California?</h3>
-            <input type="text" id="q1">
-            <br><br>
-            <div id="q1Feedback"></div>
+        <h1 class="p-5 banner">US Geography Quiz</h1>
 
-        <!-- Second Question -->
-            <h3><span id="markImg2"></span>What is the longest river?</h3>
-            <select id="q2">
-                <option value="">Select One</option>
-                <option value="ms">Mississippi</option>
-                <option value="mo">Missouri</option>
-                <option value="co">Colorado</option>
-                <option value="de">Delaware</option>
-            </select>
+        <table>
+            <tr>
+                <td>
+                    <div class="cell">
+                        <!-- First Question -->
+                        <h3><span id="markImg1" class="markImg"></span>1. What is the capital of California?</h3>
+                        <input type="text" id="q1">
+                        <br><br>
+                        <div id="q1Feedback" class = "feedback"></div>
+                        </td>
+                    </div>
+                <td>
+                    <div class="cell">
+                        <!-- Second Question -->
+                        <h3><span id="markImg2" class="markImg"></span>2. What is the longest river?</h3>
+                        <select id="q2">
+                            <option value="">Select One</option>
+                            <option value="ms">Mississippi</option>
+                            <option value="mo">Missouri</option>
+                            <option value="co">Colorado</option>
+                            <option value="de">Delaware</option>
+                        </select>
+                        <br><br>
+                        <div id="q2Feedback" class = "feedback"></div>
+                    </div>                
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell">
+                        <!-- Third Question -->
+                        <h3><span id="markImg3" class="markImg"></span>3. Which presidents are carved into mount Rushmore?</h3>
+                        <input type="checkbox" id="Jackson">  <label for="Jackson"> A. Jackson </label>
+                        <input type="checkbox" id="Franklin"> <label for="Franklin"> B. Franklin </label>
+                        <input type="checkbox" id="Jefferson"> <label for="Jefferson"> T. Jefferson </label>
+                        <input type="checkbox" id="Roosevelt"> <label for="Roosevelt"> T. Roosevelt </label>
+                        <br><br>
+                        <div id="q3Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        <!-- Fourth Question -->
+                        <h3><span id="markImg4" class="markImg"></span>4. What is the smallest US State?</h3>
+                        <div id="q4Choices"></div>
+                        <br><br>
+                        <div id="q4Feedback" class = "feedback"></div>
+                    </div>             
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell">
+                        <!-- Fifth Question -->
+                        <h3><span id="markImg5" class="markImg"></span>5. Which state has the longest coastline?</h3>
+                        <select id="q5">
+                            <option value="">Select One</option>
+                            <option value="fl">Florida</option>
+                            <option value="ca">California</option>
+                            <option value="hi">Hawaii</option>
+                            <option value="ak">Alaska</option>
+                        </select>
+                        <br><br>
+                        <div id="q5Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        <!-- Sixth Question -->
+                        <h3><span id="markImg6" class="markImg"></span>6. Which oceans border the United States?</h3>
+                        <input type="checkbox" id="Pacific">  <label for="Pacific"> Pacific Ocean</label>
+                        <input type="checkbox" id="Atlantic"> <label for="Atlantic"> Atlantic Ocean </label>
+                        <input type="checkbox" id="Indian"> <label for="Indian"> Indian Ocean </label>
+                        <input type="checkbox" id="Arctic"> <label for="Arctic"> Arctic Ocean</label>
+                        <br><br>
+                        <div id="q6Feedback" class = "feedback"></div>
+                    </div>                  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell">
+                        <!-- Seventh Question -->
+                        <h3><span id="markImg7" class="markImg"></span>7. Which California County has a greater population than 40 individual states?</h3>
+                        <input type="text" id="q7">
+                        <br><br>
+                        <div id="q7Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        <!-- Eighth Question -->
+                        <h3><span id="markImg8" class="markImg"></span>8. Which state is bordered by 8 other states?</h3>
+                        <div id="q8Choices"></div>
+                        <br><br>
+                        <div id="q8Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="cell">
+                        <!-- Ninth Question -->
+                        <h3><span id="markImg9" class="markImg"></span>9. Which state has the most national parks?</h3>
+                        <select id="q9">
+                            <option value="">Select One</option>
+                            <option value="co">Colorado</option>
+                            <option value="ut">Utah</option>
+                            <option value="ca">California</option>
+                            <option value="ak">Alaska</option>
+                        </select>
+                        <br><br>
+                        <div id="q9Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+                <td>
+                    <div class="cell">
+                        <!-- Tenth Question -->
+                        <h3><span id="markImg10" class="markImg"></span>10. How many states are in the <strong>contiguous</strong> United States?</h3>
+                        <input type="number" id="q10" min="0" max="50">
+                        <br><br>
+                        <div id="q10Feedback" class = "feedback"></div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- Eleventh Question -->
+        <div class="large_cell">
+            <h3><span id="markImg11" class="markImg"></span>11. Which region observes the Mountain Time Zone (MST)?</h3>
+            <div class="d-flex justify-content-around align-items-center">
+                <img src = "img/smaller_usaTimezones.png" alt = "Timezone map" usemap="#timezoneMap">
+                <map name ="timezoneMap">
+                    <area shape="poly" alt="Zone 1" title="Zone 1" href="#z1" coords="57,20,78,18,140,33,139,59,149,71,143,81,104,95,96,118,108,122,110,128,139,134,123,220,116,219,116,245,108,262,77,260,45,226,27,154,27,132,35,113,34,100"
+                    onclick="selectRegion('Zone 1')">
+                    <area shape="poly" alt="Zone 2" title="Zone 2" href="#z2" coords="251,51,140,34,138,57,149,70,145,81,104,94,96,119,109,122,111,127,138,134,124,219,116,219,116,245,105,265,144,290,215,306,222,289,242,289,248,222,271,215,274,192,260,185,270,179,278,146,280,135,267,110,274,93,264,73,250,73"
+                    onclick="selectRegion('Zone 2')">
+                    <area shape="poly" alt="Zone 3" title="Zone 3" href="#z3" coords="252,50,338,49,389,67,387,83,413,95,416,101,423,149,431,153,429,165,418,170,421,199,432,203,450,229,449,247,463,283,459,315,409,317,416,333,394,336,356,326,313,356,312,381,287,376,264,329,248,322,237,335,215,309,222,291,241,289,247,221,272,215,274,191,261,185,270,178,279,134,267,110,275,93,265,72,251,72"
+                    onclick="selectRegion('Zone 3')">
+                    <area shape="poly" alt="Zone 4" title="Zone 4" href="#z4" coords="390,67,399,61,405,71,450,86,461,115,468,133,463,146,502,127,501,118,527,99,542,85,575,69,582,37,599,39,609,59,616,70,591,96,602,120,556,205,567,221,508,292,539,366,522,380,474,315,458,316,464,281,448,245,451,230,431,202,422,197,418,171,429,166,433,152,423,147,416,97,388,83"
+                    onclick="selectRegion('Zone 4')">
+                </map>
+               <p id="q11">Select a zone on the map</p>
+            </div>
             <br><br>
-            <div id="q2Feedback"></div>
-            <br><br>
-        
-        <!-- Third Question -->
-            <h3><span id="markImg3"></span>Which presidents are carved into mount Rushmore?</h3>
-            <input type="checkbox" id="Jackson">  <label for="Jackson"> A. Jackson </label>
-            <input type="checkbox" id="Franklin"> <label for="Franklin"> B. Franklin </label>
-            <input type="checkbox" id="Jefferson"> <label for="Jefferson"> T. Jefferson </label>
-            <input type="checkbox" id="Roosevelt"> <label for="Roosevelt"> T. Roosevelt </label>
-            <br><br>
-            <div id="q3Feedback"></div>
-            <br><br>
+            <div id="q11Feedback" class = "feedback"></div>
+        </div>
 
-        <!-- Fourth Question -->
-            <h3><span id="markImg4"></span>What is the smallest US State?</h3>
-            <div id="q4Choices"></div>
-            <br><br>
-            <div id="q4Feedback"></div>
-            <br><br>
-
-        <!-- Fifth Question -->
-            <h3><span id="markImg5"></span>Which state has the longest coastline?</h3>
-            <select id="q5">
-                <option value="">Select One</option>
-                <option value="fl">Florida</option>
-                <option value="ca">California</option>
-                <option value="hi">Hawaii</option>
-                <option value="ak">Alaska</option>
-            </select>
-            <br><br>
-            <div id="q5Feedback"></div>
-            <br><br>
-
-        <!-- Sixth Question -->
-            <h3><span id="markImg6"></span>Which oceans border the United States?</h3>
-            <input type="checkbox" id="Pacific">  <label for="Pacific"> Pacific Ocean</label>
-            <input type="checkbox" id="Atlantic"> <label for="Atlantic"> Atlantic Ocean </label>
-            <input type="checkbox" id="Indian"> <label for="Indian"> Indian Ocean </label>
-            <input type="checkbox" id="Arctic"> <label for="Arctic"> Arctic Ocean</label>
-            <br><br>
-            <div id="q6Feedback"></div>
-            <br><br>
-
-        <!-- Seventh Question -->
-            <h3><span id="markImg7"></span>Which California County has a greater population than 40 individual states?</h3>
-            <input type="text" id="q7">
-            <br><br>
-            <div id="q7Feedback"></div>
-            <br><br>
-
-        <!-- Eighth Question -->
-            <h3><span id="markImg8"></span>Which state is bordered by 8 other states?</h3>
-            <input type="radio" name="q8" id= "ky" value="Kentucky"> <label for="ky"> Kentucky </label>
-            <input type="radio" name="q8" id= "tn" value="Tennessee"> <label for="tn"> Tennessee </label>
-            <input type="radio" name="q8" id= "ma" value="Massachusetts"> <label for="ma"> Massachusetts </label>
-            <input type="radio" name="q8" id= "pa" value="Pennsylvania"> <label for="pa"> Pennsylvania </label>
-            <br><br>
-            <div id="q8Feedback"></div>
-            <br><br>
-
-        <!-- Ninth Question -->
-            <h3><span id="markImg9"></span>Which state has the most national parks?</h3>
-            <select id="q9">
-                <option value="">Select One</option>
-                <option value="co">Colorado</option>
-                <option value="ut">Utah</option>
-                <option value="ca">California</option>
-                <option value="ak">Alaska</option>
-            </select>
-            <br><br>
-            <div id="q9Feedback"></div>
-            <br><br>
-        
         <h3 id="validationFdbk" class="bg-danger text-white"></h3>
-        <button class = "btn btn-outline-primary">Submit Quiz</button>
+        <button><span>Submit Quiz</span></button>
 
         <br>
         <h2 id ="totalScore"></h2>
